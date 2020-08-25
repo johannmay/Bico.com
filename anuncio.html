@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="pt-br">
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+ <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/inicio.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/utility.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/anuncio.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+     <head>
+        <meta charset="utf-8">
+        <title>Bico.com - Anuncie</title>
+    </head>
+    
+    <body>
+    
+    <header>
+        <nav class="navbar navbar-expand-lg">   
+            <a class="navbar-brand" href="index.html"><img src="css/img/logo.png" width="100" height="30"></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="fa fa-bars" aria-hidden="true"></i></span>
+              </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Início <span class="sr-only">(current)</span></a>
+                    </li>
+                 <li class="nav-item" id="sobre">
+                    <a class="nav-link" href="#">Sobre</a>
+                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="categorias.html">Categorias/Buscar</a>
+                 </li>
+                    
+                
+                </ul>
+                
+                <ul class="navbar-nav">
+                    
+                      <li class="nav-item">
+                        <div class="search-box">
+                          <input class="search-txt" type="text" name="" placeholder="Estou Procurando Por...">
+                            <a class="search-btn" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                          
+                        </div>
+                    </li>
+                    
+                     <li class="nav-item">
+                        <a class ="nav-link" href=""  data-toggle="modal" data-target="#modalAccountForm"><img src="css/img/yasuo.d5650289-0ad1-4560-ac30-38a18a1847bb" alt="Avatar" class="avatar"></a>
+                    </li>
+                </ul>
+            </div>
+           </nav>
+           
+           </header>
+        <div class="modal fade" id="modalAccountForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Bem-vindo Usuário :)</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+         <p>Você pode começar a anunciar ou configurar sua conta!!</p>
+        </div>
+     
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-default" style="background-color:#ffbf00;" href=""><span>Meu Perfil</span></button>
+            <button class="btn btn-default" style="background-color:#ffbf00;" href=""><span>Logout</span></button>
+      </div>    
+        
+    </div>
+  </div>
+</div>
+        
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-6 col-md-7">
+            
+                    <form class="form-container needs-validation" novalidate>
+                    
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Título*" required>
+                           <div class="invalid-feedback">
+                                Por favor, dê um título ao anúncio.
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Descrição*" required></textarea>
+                          
+                          <div class="invalid-feedback">
+                                Por favor, dê uma descrição do produto ou serviço.
+                          </div>
+                      </div>
+                        
+                        <div class="form-group">
+                           <label for="exampleFormControlInput1">Categorias*</label>
+                            <select class="custom-select">
+                                  <option selected>Escolha uma Categoria</option>
+                                  <option value="1">TI</option>
+                                  <option value="2">Casa & Apartamento</option>
+                                  <option value="3">Engenharia Civil</option>
+                                  <option value="4">Culinária</option>
+                                <option value="5">Eventos</option>
+                                <option value="6">Pets</option>
+                                <option value="7">Mecânica</option>
+                                <option value="8">Dedetização</option>
+                            </select>
+                        <div class="invalid-feedback">
+                                Por favor, escolha uma categoria de produto ou serviço.
+                          </div>
+                        </div>
+                        <div class="form-group">
+                        
+                            <label for="exampleFormControlInput1">Fotos</label>
+                            <div class="custom-file">
+                              <input type="file" class="custom-file-input" id="customFile">
+                              <label class="custom-file-label" for="customFile">Escolher arquivo</label>
+                            </div>
+                        
+                        
+                        
+                        </div>
+                        <div class="form-group">
+                        
+                        <label for="exampleFormControlInput1">Localização - CEP</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="CEP*" required>
+                            <div class="invalid-feedback">
+                                Por favor, Insira uma Localização.
+                          </div>
+                        </div>
+                        <div class="form-group">
+                        
+                            
+                        <label for="exampleFormControlInput1">Contato</label>
+                            
+                              <input type:text class="form-control" id="exampleFormControlInput1" placeholder="Contato*" required>
+                            <div class="invalid-feedback">
+                                Por favor, insira um contato.
+                          </div>
+                        
+                        </div>
+                    
+                        <div class="form-check">
+                         <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Ocultar meu telefone neste anúncio
+                            </label>
+                        
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block" href="#" style="background: #ffbf00 ">Anunciar</button>
+                        <small class="form-text text-muted">As informações com (*) são obrigatórias</small>
+                </form>
+
+            
+            </div>
+        
+        
+        
+        </div>    
+        
+    </div>
+        <!-- Login Modal -->   
+        
+        <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Login</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+          <input type="email" id="defaultForm-email" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="defaultForm-email">Email</label>
+        </div>
+
+        <div class="md-form mb-4">
+          <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+          <input type="password" id="defaultForm-pass" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="defaultForm-pass">Senha</label>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-default" style="background-color:#ffbf00;"><span><i class="fa fa-sign-in" aria-hidden="true"></i></span></button>
+      </div>
+    </div>
+  </div>
+</div>
+        
+         <!-- Cadastro Modal -->   
+        
+        <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Seja Parte do Bico.com</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <i class="fa fa-address-book" aria-hidden="true"></i>
+          <input type="text" id="orangeForm-name" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="orangeForm-name">Seu Nome Completo</label>
+        </div>
+        <div class="md-form mb-5">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+          <input type="email" id="orangeForm-email" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="orangeForm-email">Seu Email</label>
+        </div>
+
+        <div class="md-form mb-4">
+          <i class="fa fa-unlock" aria-hidden="true"></i>
+          <input type="password" id="orangeForm-pass" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="orangeForm-pass">Crie uma Senha</label>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-default" style="background-color:#ffbf00;"><span><i class="fa fa-user-plus" aria-hidden="true"></i></span></button>
+      </div>
+    </div>
+  </div>
+</div>
+        <script>
+            // Exemplo de JavaScript inicial para desativar envios de formulário, se houver campos inválidos.
+            (function() {
+              'use strict';
+              window.addEventListener('load', function() {
+                // Pega todos os formulários que nós queremos aplicar estilos de validação Bootstrap personalizados.
+                var forms = document.getElementsByClassName('needs-validation');
+                // Faz um loop neles e evita o envio
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                  form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                  }, false);
+                });
+              }, false);
+            })();
+            
+            
+        </script>
+    
+    
+    </body>
+    
+</html>
